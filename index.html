@@ -26,9 +26,7 @@
       --blue-dim: #102030;
       --mono: "JetBrains Mono", "Fira Mono", "Cascadia Code", monospace;
     }
-
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
       background: var(--bg);
@@ -36,7 +34,6 @@
       line-height: 1.6;
       font-size: 14px;
     }
-
     /* ── TOP BAR ── */
     .topbar {
       border-bottom: 1px solid var(--border);
@@ -69,7 +66,6 @@
       font-weight: 500;
       color: var(--text);
     }
-
     /* ── WEEK TABS BAR ── */
     .week-tabs-bar {
       border-bottom: 1px solid var(--border);
@@ -87,7 +83,6 @@
     .week-tabs-bar::-webkit-scrollbar { height: 3px; }
     .week-tabs-bar::-webkit-scrollbar-track { background: transparent; }
     .week-tabs-bar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
-
     .week-tab {
       display: flex;
       flex-direction: column;
@@ -115,11 +110,9 @@
       color: var(--text-dim);
     }
     .week-tab.active .week-tab-label { color: var(--text-muted); }
-
     /* ── WEEK PANELS ── */
     .week-panel { display: none; }
     .week-panel.active { display: block; }
-
     /* ── HERO ── */
     .hero {
       padding: 48px 40px 36px;
@@ -149,7 +142,6 @@
       line-height: 1.7;
       max-width: 600px;
     }
-
     /* ── COMPANY NAV PILLS ── */
     .co-nav {
       display: flex;
@@ -175,14 +167,12 @@
       border-color: var(--accent);
       background: var(--accent-dim);
     }
-
     /* ── LAYOUT ── */
     .main {
       max-width: 900px;
       margin: 0 auto;
       padding: 0 40px 80px;
     }
-
     /* ── DIVIDER LABEL ── */
     .divider {
       display: flex;
@@ -204,7 +194,6 @@
       height: 1px;
       background: var(--border-light);
     }
-
     /* ── BIG STORY ── */
     .big-story {
       background: var(--surface);
@@ -236,7 +225,6 @@
       color: #a0a0a8;
       line-height: 1.75;
     }
-
     /* ── COMPANY CARD ── */
     .company-card {
       background: var(--surface);
@@ -286,7 +274,6 @@
     .sig-product      { background: var(--green-dim);  color: var(--green);  border: 1px solid #1a4030; }
     .sig-leadership   { background: var(--amber-dim);  color: var(--amber);  border: 1px solid #3a2a10; }
     .sig-quiet        { background: var(--surface-2);  color: var(--text-muted); border: 1px solid var(--border); }
-
     /* ── CATEGORY ROWS ── */
     .cat-row {
       display: grid;
@@ -310,7 +297,6 @@
     .ck-financial { color: var(--green); }
     .ck-customer  { color: var(--blue); }
     .ck-marketing { color: var(--amber); }
-
     .cat-val {
       padding: 14px 22px;
       font-size: 13.5px;
@@ -323,7 +309,6 @@
     .cat-val li { margin-bottom: 6px; color: #a0a0a8; }
     .cat-val strong { color: var(--text); font-weight: 600; }
     .nothing { color: var(--text-dim); font-style: italic; font-size: 13px; }
-
     /* ── STAT CHIPS ── */
     .stat {
       display: inline-block;
@@ -337,7 +322,6 @@
     .stat-g { background: var(--green-dim); color: var(--green); border: 1px solid #1a4030; }
     .stat-r { background: var(--red-dim);   color: var(--red);   border: 1px solid #3a1010; }
     .stat-b { background: var(--blue-dim);  color: var(--blue);  border: 1px solid #1a3a50; }
-
     /* ── SOURCE LINKS ── */
     a.ref {
       display: inline-flex;
@@ -357,7 +341,6 @@
       transition: opacity 0.15s;
     }
     a.ref:hover { opacity: 1; text-decoration: underline; }
-
     /* ── THEMES ── */
     .themes-grid { display: flex; flex-direction: column; gap: 10px; }
     .theme-item {
@@ -389,7 +372,6 @@
       color: #909098;
       line-height: 1.75;
     }
-
     /* ── FOOTER ── */
     .scan-footer {
       margin-top: 48px;
@@ -403,7 +385,6 @@
   </style>
 </head>
 <body>
-
 <!-- TOP BAR -->
 <div class="topbar">
   <div class="topbar-left">
@@ -412,21 +393,20 @@
     <span class="topbar-title">Weekly Market Scan</span>
   </div>
 </div>
-
 <!-- WEEK TABS BAR -->
 <div class="week-tabs-bar" id="weekTabsBar">
   <div class="week-tab active" data-week="2026-03-24" onclick="switchWeek('2026-03-24', this)">
     <span class="week-tab-date">Mar 24</span>
     <span class="week-tab-label">2026</span>
   </div>
-  <!-- Future weeks will be added here automatically -->
+  <!-- PASTE NEW WEEK TAB HERE (above this comment) -->
 </div>
+<!-- PASTE NEW WEEK PANEL HERE (above this comment) -->
 
 <!-- ════════════════════════════════════════
      WEEK: 2026-03-24
 ════════════════════════════════════════ -->
 <div class="week-panel active" id="week-2026-03-24">
-
   <div class="hero">
     <div class="hero-eyebrow">Week of March 24, 2026</div>
     <h1>What moved in your<br>competitive landscape</h1>
@@ -441,18 +421,14 @@
       <a href="#w20260324-workday">Workday</a>
     </nav>
   </div>
-
   <div class="main">
-
     <!-- BIG STORY -->
     <div class="big-story">
       <div class="story-tag">// Lead story</div>
       <h2>SAP completes SmartRecruiters integration into SuccessFactors</h2>
       <p>On March 6, SAP launched SmartRecruiters inside SuccessFactors with single sign-on and connected AI agents — Joule (SAP's AI) and Winston (SmartRecruiters' AI) now work in tandem across the hiring workflow. This is the first major post-acquisition deliverable following SAP's ~$1.5B deal in September 2025. For the broader market, it accelerates a pattern already underway: talent acquisition capabilities being absorbed into HCM platforms, shrinking the viable space for standalone ATSs. <a href="https://news.sap.com/2026/03/smartrecruiters-for-sap-successfactors-ai-driven-hiring-connected-hcm/" class="ref">↗ SAP Newsroom</a></p>
     </div>
-
     <div class="divider"><span class="divider-label">Companies</span><div class="divider-line"></div></div>
-
     <!-- SMARTRECRUITERS -->
     <div class="company-card" id="w20260324-smartrecruiters">
       <div class="company-header">
@@ -490,7 +466,6 @@
         <div class="cat-val"><p class="nothing">No named campaigns or social activations. Worth watching whether SAP and SmartRecruiters begin co-marketing under a unified brand or keep them visually separate.</p></div>
       </div>
     </div>
-
     <!-- iCIMS -->
     <div class="company-card" id="w20260324-icims">
       <div class="company-header">
@@ -527,7 +502,6 @@
         </div>
       </div>
     </div>
-
     <!-- SAP SUCCESSFACTORS -->
     <div class="company-card" id="w20260324-successfactors">
       <div class="company-header">
@@ -565,7 +539,6 @@
         <div class="cat-val"><p class="nothing">No named campaigns. Go-to-market running through analyst relations and SAP Community blogs — announcement-driven, not campaign-driven.</p></div>
       </div>
     </div>
-
     <!-- ORACLE HCM -->
     <div class="company-card" id="w20260324-oracle">
       <div class="company-header">
@@ -603,7 +576,6 @@
         <div class="cat-val"><p class="nothing">No named campaigns. Marketing runs through Fusion Insider blog and quarterly release webinars. Red Bull Racing is Oracle's highest-visibility brand activity — brand, not demand generation.</p></div>
       </div>
     </div>
-
     <!-- PHENOM -->
     <div class="company-card" id="w20260324-phenom">
       <div class="company-header">
@@ -643,7 +615,6 @@
         </div>
       </div>
     </div>
-
     <!-- BEAMERY -->
     <div class="company-card" id="w20260324-beamery">
       <div class="company-header">
@@ -683,7 +654,6 @@
         </div>
       </div>
     </div>
-
     <!-- WORKDAY -->
     <div class="company-card" id="w20260324-workday">
       <div class="company-header">
@@ -725,10 +695,8 @@
         </div>
       </div>
     </div>
-
     <!-- THEMES -->
     <div class="divider"><span class="divider-label">Themes worth tracking</span><div class="divider-line"></div></div>
-
     <div class="themes-grid">
       <div class="theme-item">
         <div class="theme-index">01</div>
@@ -759,14 +727,11 @@
         </div>
       </div>
     </div>
-
     <div class="scan-footer">
       Sources: company newsrooms · HR Brew · PR Newswire · BusinessWire · Josh Bersin · iTWire · Fortune · Cloud Wars · Diginomica · Oracle 26A release notes · SAPinsider
     </div>
-
   </div><!-- /main -->
 </div><!-- /week panel -->
-
 <script>
   function switchWeek(weekId, tabEl) {
     // hide all panels
@@ -780,7 +745,6 @@
     // scroll to top of content
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-
   // Smooth scroll for anchor links, accounting for sticky header height
   document.addEventListener('click', function(e) {
     const a = e.target.closest('a[href^="#"]');
@@ -793,6 +757,5 @@
     window.scrollTo({ top, behavior: 'smooth' });
   });
 </script>
-
 </body>
 </html>
