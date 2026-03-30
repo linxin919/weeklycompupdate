@@ -26,9 +26,7 @@
       --blue-dim: #102030;
       --mono: "JetBrains Mono", "Fira Mono", "Cascadia Code", monospace;
     }
-
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
       background: var(--bg);
@@ -36,7 +34,6 @@
       line-height: 1.6;
       font-size: 14px;
     }
-
     /* ── TOP BAR ── */
     .topbar {
       border-bottom: 1px solid var(--border);
@@ -69,7 +66,6 @@
       font-weight: 500;
       color: var(--text);
     }
-
     /* ── WEEK TABS BAR ── */
     .week-tabs-bar {
       border-bottom: 1px solid var(--border);
@@ -87,7 +83,6 @@
     .week-tabs-bar::-webkit-scrollbar { height: 3px; }
     .week-tabs-bar::-webkit-scrollbar-track { background: transparent; }
     .week-tabs-bar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
-
     .week-tab {
       display: flex;
       flex-direction: column;
@@ -115,11 +110,9 @@
       color: var(--text-dim);
     }
     .week-tab.active .week-tab-label { color: var(--text-muted); }
-
     /* ── WEEK PANELS ── */
     .week-panel { display: none; }
     .week-panel.active { display: block; }
-
     /* ── HERO ── */
     .hero {
       padding: 48px 40px 36px;
@@ -149,7 +142,6 @@
       line-height: 1.7;
       max-width: 600px;
     }
-
     /* ── COMPANY NAV PILLS ── */
     .co-nav {
       display: flex;
@@ -175,14 +167,12 @@
       border-color: var(--accent);
       background: var(--accent-dim);
     }
-
     /* ── LAYOUT ── */
     .main {
       max-width: 900px;
       margin: 0 auto;
       padding: 0 40px 80px;
     }
-
     /* ── DIVIDER LABEL ── */
     .divider {
       display: flex;
@@ -204,7 +194,6 @@
       height: 1px;
       background: var(--border-light);
     }
-
     /* ── BIG STORY ── */
     .big-story {
       background: var(--surface);
@@ -236,7 +225,6 @@
       color: #a0a0a8;
       line-height: 1.75;
     }
-
     /* ── COMPANY CARD ── */
     .company-card {
       background: var(--surface);
@@ -286,7 +274,6 @@
     .sig-product      { background: var(--green-dim);  color: var(--green);  border: 1px solid #1a4030; }
     .sig-leadership   { background: var(--amber-dim);  color: var(--amber);  border: 1px solid #3a2a10; }
     .sig-quiet        { background: var(--surface-2);  color: var(--text-muted); border: 1px solid var(--border); }
-
     /* ── CATEGORY ROWS ── */
     .cat-row {
       display: grid;
@@ -310,7 +297,6 @@
     .ck-financial { color: var(--green); }
     .ck-customer  { color: var(--blue); }
     .ck-marketing { color: var(--amber); }
-
     .cat-val {
       padding: 14px 22px;
       font-size: 13.5px;
@@ -323,7 +309,6 @@
     .cat-val li { margin-bottom: 6px; color: #a0a0a8; }
     .cat-val strong { color: var(--text); font-weight: 600; }
     .nothing { color: var(--text-dim); font-style: italic; font-size: 13px; }
-
     /* ── STAT CHIPS ── */
     .stat {
       display: inline-block;
@@ -337,7 +322,6 @@
     .stat-g { background: var(--green-dim); color: var(--green); border: 1px solid #1a4030; }
     .stat-r { background: var(--red-dim);   color: var(--red);   border: 1px solid #3a1010; }
     .stat-b { background: var(--blue-dim);  color: var(--blue);  border: 1px solid #1a3a50; }
-
     /* ── SOURCE LINKS ── */
     a.ref {
       display: inline-flex;
@@ -357,7 +341,6 @@
       transition: opacity 0.15s;
     }
     a.ref:hover { opacity: 1; text-decoration: underline; }
-
     /* ── THEMES ── */
     .themes-grid { display: flex; flex-direction: column; gap: 10px; }
     .theme-item {
@@ -389,7 +372,6 @@
       color: #909098;
       line-height: 1.75;
     }
-
     /* ── FOOTER ── */
     .scan-footer {
       margin-top: 48px;
@@ -403,7 +385,6 @@
   </style>
 </head>
 <body>
-
 <!-- TOP BAR -->
 <div class="topbar">
   <div class="topbar-left">
@@ -412,21 +393,369 @@
     <span class="topbar-title">Weekly Market Scan</span>
   </div>
 </div>
-
 <!-- WEEK TABS BAR -->
 <div class="week-tabs-bar" id="weekTabsBar">
-  <div class="week-tab active" data-week="2026-03-24" onclick="switchWeek('2026-03-24', this)">
+  <div class="week-tab" data-week="2026-03-24" onclick="switchWeek('2026-03-24', this)">
     <span class="week-tab-date">Mar 24</span>
     <span class="week-tab-label">2026</span>
   </div>
-  <!-- Future weeks will be added here automatically -->
+  <div class="week-tab active" data-week="2026-03-30" onclick="switchWeek('2026-03-30', this)">
+    <span class="week-tab-date">Mar 30</span>
+    <span class="week-tab-label">2026</span>
+  </div>
+  <!-- PASTE NEW WEEK TAB HERE (above this comment) -->
 </div>
+<!-- PASTE NEW WEEK PANEL HERE (above this comment) -->
+
+<!-- ════════════════════════════════════════
+     WEEK: 2026-03-30
+════════════════════════════════════════ -->
+<div class="week-panel active" id="week-2026-03-30">
+
+  <div class="hero">
+    <div class="hero-eyebrow">Week of March 30, 2026</div>
+    <h1>What moved in your<br>competitive landscape</h1>
+    <p class="hero-sub">Covering product, financial, customer, and marketing signals. New developments only — recurring facts are omitted.</p>
+    <nav class="co-nav">
+      <a href="#w20260330-smartrecruiters">SmartRecruiters</a>
+      <a href="#w20260330-icims">iCIMS</a>
+      <a href="#w20260330-successfactors">SAP SuccessFactors</a>
+      <a href="#w20260330-oracle">Oracle HCM</a>
+      <a href="#w20260330-phenom">Phenom</a>
+      <a href="#w20260330-beamery">Beamery</a>
+      <a href="#w20260330-workday">Workday</a>
+      <a href="#w20260330-eightfold">Eightfold AI</a>
+    </nav>
+  </div>
+
+  <div class="main">
+
+    <!-- BIG STORY -->
+    <div class="big-story">
+      <div class="story-tag">// Lead story</div>
+      <h2>Workday ships Sana from Workday — 300+ AI skills live for 65% of the Fortune 500</h2>
+      <p>On March 17, Workday formally launched Sana from Workday, framing it as "superintelligence for work." Three tiers shipped simultaneously: <strong>Sana for Workday</strong> (natural-language AI interface replacing form-based navigation), <strong>Sana Self-Service Agent</strong> (300+ HR/finance skills that automate workflows end-to-end, now available to 65% of Fortune 500), and <strong>Sana Enterprise</strong> (extends AI actions beyond Workday into Salesforce, Teams, Slack, and SharePoint). Unlike prior copilot releases that bolted a chat box onto existing UI, Sana is designed to make Workday's transactional core the engine — not the interface. Josh Bersin published a dedicated analysis the same day. <a href="https://investor.workday.com/news-and-events/press-releases/news-details/2026/Introducing-Sana-from-Workday-Superintelligence-for-Work-That-Finds-Answers-Takes-Action-and-Automates-Workflows/" class="ref">↗ Workday</a> <a href="https://joshbersin.com/2026/03/workday-and-sana-unveil-a-bold-new-strategy-for-ai/" class="ref">↗ Bersin</a></p>
+    </div>
+
+    <div class="divider"><span class="divider-label">Companies</span><div class="divider-line"></div></div>
+
+    <!-- SMARTRECRUITERS -->
+    <div class="company-card" id="w20260330-smartrecruiters">
+      <div class="company-header">
+        <div class="company-left">
+          <span class="company-name">SmartRecruiters</span>
+          <span class="company-descriptor">acquired by SAP · Sept 2025</span>
+        </div>
+        <span class="signal-tag sig-integration">Integration rolling</span>
+      </div>
+      <div class="cat-row">
+        <div class="cat-key"><span class="cat-key-label ck-product">Product</span></div>
+        <div class="cat-val">
+          <p>Phase 1 of the native SuccessFactors integration is live (~5 months after close): User Sync, Config/Foundation Data Sync, Job Sync, SSO, and a unified UI so recruiters work across both systems without context-switching. Winston and Joule now operate as connected agents. Phase 2 — full Hire Sync — planned for ~June 2026. Existing SuccessFactors Recruiting customers are not obligated to migrate; SAP is offering "simple and flexible integration paths." <a href="https://news.sap.com/2026/03/smartrecruiters-for-sap-successfactors-ai-driven-hiring-connected-hcm/" class="ref">↗ SAP Newsroom</a> <a href="https://sapinsider.org/blogs/sap-expands-smartrecruiters-integration-to-embed-ai-unified-data-across-hiring-workflows/" class="ref">↗ SAPinsider</a></p>
+        </div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-key"><span class="cat-key-label ck-financial">Financial</span></div>
+        <div class="cat-val"><p class="nothing">No new financial activity this week.</p></div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-key"><span class="cat-key-label ck-customer">Customers</span></div>
+        <div class="cat-val"><p class="nothing">No new named customer wins this week.</p></div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-key"><span class="cat-key-label ck-marketing">Marketing</span></div>
+        <div class="cat-val">
+          <p>March 2026 Product Release Podcast posted on LinkedIn recapping Phase 1 and the Winston + Joule connected-agent capability. March 5 customer webinar — "The Future of Intelligent Hiring" — walked customers through the talent orchestration roadmap. <a href="https://www.linkedin.com/posts/smartrecruiters_march-2026-product-release-podcast-activity-7441904278421762048-Thpk" class="ref">↗ LinkedIn</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- iCIMS -->
+    <div class="company-card" id="w20260330-icims">
+      <div class="company-header">
+        <div class="company-left">
+          <span class="company-name">iCIMS</span>
+          <span class="company-descriptor">talent acquisition platform</span>
+        </div>
+        <span class="signal-tag sig-product">Spring release + new brand</span>
+      </div>
+      <div class="cat-row">
+        <div class="cat-key"><span class="cat-key-label ck-product">Product</span></div>
+        <div class="cat-val">
+          <p><strong>Spring 2026 release (March 16):</strong></p>
+          <ul>
+            <li><strong>iCIMS Frontline AI</strong> — 24/7 AI conversational hiring via SMS, WhatsApp, and web. Full flow: job discovery → application → interview scheduling in one mobile-first session. Reported: <span class="stat stat-g">75% faster time-to-fill</span> <span class="stat stat-g">90% fewer manual tasks</span> <a href="https://hrtechfeed.com/icims-unveils-ai-powered-spring-release-to-tackle-frontline-hiring-crisis/" class="ref">↗ HR Tech Feed</a></li>
+            <li><strong>iCIMS Coalesce AI</strong> (launched March 3) — unified AI brand spanning candidate search/match, digital assistants, autonomous agents, and Frontline AI. Core AI features included for new customers at no extra cost. <a href="https://techintelpro.com/news/hr/talent-acquisition/icims-unveils-new-brand-coalesce-ai-for-talent-acquisition" class="ref">↗ TechIntelPro</a></li>
+            <li>New automatic source attribution in iCIMS CXM — visibility into which inbound/outbound/CRM channels produce the highest-quality hires.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-key"><span class="cat-key-label ck-financial">Financial</span></div>
+        <div class="cat-val"><p class="nothing">No new funding or M&amp;A this week.</p></div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-key"><span class="cat-key-label ck-customer">Customers</span></div>
+        <div class="cat-val"><p class="nothing">No new named wins this week.</p></div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-key"><span class="cat-key-label ck-marketing">Marketing</span></div>
+        <div class="cat-val">
+          <p>New visual identity launched March 3 — new purple, updated mark, tagline <em>"powering exceptional hiring."</em> Headline Talent Acquisition sponsor at <strong>Transform 2026</strong> (March 23–25, Las Vegas, booth #237). SVP of Data &amp; AI Lisa Fiondella joined a panel on responsible AI adoption March 25. iCIMS Insights March 2026 Workforce Report published, drawing on data from 4,000+ organisations. <a href="https://www.icims.com/company/newsroom/brand/" class="ref">↗ Brand Launch</a> <a href="https://www.icims.com/company/newsroom/transform2026/" class="ref">↗ Transform</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SAP SUCCESSFACTORS -->
+    <div class="company-card" id="w20260330-successfactors">
+      <div class="company-header">
+        <div class="company-left">
+          <span class="company-name">SAP SuccessFactors</span>
+          <span class="company-descriptor">enterprise HCM suite</span>
+        </div>
+        <span class="signal-tag sig-integration">1H release upcoming</span>
+      </div>
+      <div class="cat-row">
+        <div class="cat-key"><span class="cat-key-label ck-product">Product</span></div>
+        <div class="cat-val">
+          <p>SmartRecruiters Phase 1 integration now live (see Mar 24 lead story). 1H 2026 release dates confirmed: Preview <strong>April 13</strong>, Production <strong>May 15–16</strong>. The release will make the <strong>Universal Full Profile View</strong> available to all customers and marks end-of-life for <strong>Onboarding 1.0</strong> — customers must migrate to Onboarding 2.0 before that date. <a href="https://community.sap.com/t5/sap-successfactors-events/preparing-for-sap-successfactors-1h-2026-release-universal-full-profile/ev-p/14335739" class="ref">↗ SAP Community</a></p>
+        </div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-key"><span class="cat-key-label ck-financial">Financial</span></div>
+        <div class="cat-val">
+          <p>SAP completed acquisition of <strong>Reltio</strong> (cloud master data management) in March 2026 — not HCM-specific but deepens data integration infrastructure underpinning SuccessFactors people data quality. <a href="https://tracxn.com/d/acquisitions/acquisitions-by-sap/__x5CIRKY1hK0EFqwSccZyZ8WetX8iwojYA7EsxOr46ns" class="ref">↗ Tracxn</a></p>
+        </div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-key"><span class="cat-key-label ck-customer">Customers</span></div>
+        <div class="cat-val"><p class="nothing">No new named customer wins this week.</p></div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-key"><span class="cat-key-label ck-marketing">Marketing</span></div>
+        <div class="cat-val">
+          <p>Josh Bersin's podcast covered "Big AI Announcements From Workday, SuccessFactors, and LinkedIn" this month. Confirmed 1H 2026 release dates triggered widespread LinkedIn and X discussion, particularly around the Onboarding 1.0 deprecation deadline. <a href="https://joshbersin.com/podcast/big-ai-announcements-from-workday-successfactors-and-linkedin/" class="ref">↗ Bersin Podcast</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ORACLE HCM -->
+    <div class="company-card" id="w20260330-oracle">
+      <div class="company-header">
+        <div class="company-left">
+          <span class="company-name">Oracle HCM</span>
+          <span class="company-descriptor">enterprise HCM suite</span>
+        </div>
+        <span class="signal-tag sig-product">Strong earnings + 26A AI</span>
+      </div>
+      <div class="cat-row">
+        <div class="cat-key"><span class="cat-key-label ck-product">Product</span></div>
+        <div class="cat-val">
+          <p>26A release embeds AI into operational HCM workflows: <strong>Intelligent Journeys</strong> automate employee process flows by context; <strong>Working Hours Automation</strong> removes manual scheduling friction. <strong>AI Agent Studio</strong> lets organisations and third-party developers build custom agents inside Fusion HCM against core enterprise data. Oracle's stated position: "hundreds of embedded AI agents at no extra cost" — a pointed contrast to competitors charging per-agent. <a href="https://fusionpathfinder.com/2026/03/04/oracle-fusion-ai-is-expanding-fast-26a-brings-intelligent-journeys-and-working-hours-automation/" class="ref">↗ Fusion Pathfinder</a></p>
+        </div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-key"><span class="cat-key-label ck-financial">Financial</span></div>
+        <div class="cat-val">
+          <p>Q3 FY2026 earnings (March 10): total revenue <span class="stat stat-g">$17.2B +22% YoY</span>, cloud revenue <span class="stat stat-g">$8.9B +44%</span>, Fusion HCM <span class="stat stat-g">+15%</span>. Cloud applications annualised run rate at $16.1B. <a href="https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Fiscal-Year-2026-Third-Quarter-Financial-Results/default.aspx" class="ref">↗ Oracle Investor</a></p>
+        </div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-key"><span class="cat-key-label ck-customer">Customers</span></div>
+        <div class="cat-val">
+          <p>Oracle spotlighted <strong>Nokia</strong> as a 2026 HCM Award winner (LinkedIn, March 26) — consolidated 14 legacy HR apps into a single Oracle Fusion Cloud HCM instance covering <span class="stat stat-g">80,000+</span> employees across 115 countries. Implementation partner: Capgemini Belgium. <a href="https://www.oracle.com/customers/nokia/" class="ref">↗ Nokia Case Study</a></p>
+        </div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-key"><span class="cat-key-label ck-marketing">Marketing</span></div>
+        <div class="cat-val">
+          <p>Oracle HCM Users Group (OHUG) sessions ran March 27–28 with Oracle Senior Director Floyd Teter presenting on the Redwood Design Center UX framework. Social posts promoted HCM AI Agents for meeting prep and applicant screening use cases. <a href="https://ohug.org/" class="ref">↗ OHUG</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHENOM -->
+    <div class="company-card" id="w20260330-phenom">
+      <div class="company-header">
+        <div class="company-left">
+          <span class="company-name">Phenom</span>
+          <span class="company-descriptor">applied AI for HR</span>
+        </div>
+        <span class="signal-tag sig-acquisition">2 acquisitions in Q1</span>
+      </div>
+      <div class="cat-row">
+        <div class="cat-key"><span class="cat-key-label ck-product">Product</span></div>
+        <div class="cat-val"><p class="nothing">No standalone product launch this week. IAMPHENOM 2026 (March 10–12) was the primary showcase vehicle; post-conference product updates not yet published.</p></div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-key"><span class="cat-key-label ck-financial">Financial</span></div>
+        <div class="cat-val">
+          <p>Two acquisitions completed in Q1 2026:
+          <ul>
+            <li><strong>Included AI</strong> (Jan 14) — AI-native agentic people analytics; natural-language queries surface workforce insights. Phenom's 6th acquisition. CEO Mahe Bayireddi: <em>"Deeper people analytics are no longer optional — they're the foundation for building agile, future-ready teams."</em> <a href="https://www.phenom.com/press-release/phenom-acquires-included-ai-agentic-analytics" class="ref">↗ Phenom</a></li>
+            <li><strong>Be Applied</strong> (Feb 10) — AI-driven cognitive assessment at scale. Phenom's 7th acquisition. <a href="https://siliconangle.com/2026/02/10/phenom-strengthens-ai-hiring-platform-applied-acquisition/" class="ref">↗ SiliconANGLE</a></li>
+          </ul></p>
+        </div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-key"><span class="cat-key-label ck-customer">Customers</span></div>
+        <div class="cat-val"><p class="nothing">No net-new named wins this week.</p></div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-key"><span class="cat-key-label ck-marketing">Marketing</span></div>
+        <div class="cat-val">
+          <p><strong>IAMPHENOM 2026</strong> (March 10–12, Philadelphia) drew <span class="stat stat-g">3,000+</span> attendees across 75+ sessions with 100+ speakers. All sponsorships sold out by March 2. IAMPHENOM 2027 already save-the-dated April 20–22. <a href="https://www.phenom.com/press-release/iamphenom-2026-sponsorships-sell-out-in" class="ref">↗ Phenom</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- BEAMERY -->
+    <div class="company-card" id="w20260330-beamery">
+      <div class="company-header">
+        <div class="company-left">
+          <span class="company-name">Beamery</span>
+          <span class="company-descriptor">workforce intelligence platform</span>
+        </div>
+        <span class="signal-tag sig-product">Governance + new leadership</span>
+      </div>
+      <div class="cat-row">
+        <div class="cat-key"><span class="cat-key-label ck-product">Product</span></div>
+        <div class="cat-val">
+          <p>Continuing to market the <strong>Workforce Intelligence Suite</strong> built on <strong>Task Intelligence</strong> — decomposes roles into tasks, evaluates automation potential per task, models reskilling pathways. <strong>Ray</strong>, an embedded agentic AI consultant, lets HR and C-suite leaders query workforce data via natural language. Achieved <strong>ISO 42001</strong> certification — the world's first international standard for AI Management Systems, positioning compliance as a product differentiator. <a href="https://beamery.com/resources/news/beamery-launches-first-to-market-task-intelligence-for-workforce-transformation" class="ref">↗ Task Intelligence</a></p>
+        </div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-key"><span class="cat-key-label ck-financial">Financial</span></div>
+        <div class="cat-val">
+          <p>Secured debt financing from CIBC Innovation Banking. No equity round or M&amp;A this week. <a href="https://www.unleash.ai/hr-technology/hr-tech-unicorn-beamery-secures-debt-financing-from-cibc-innovation-banking/" class="ref">↗ UNLEASH</a></p>
+        </div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-key"><span class="cat-key-label ck-customer">Customers</span></div>
+        <div class="cat-val"><p class="nothing">No net-new named wins this week.</p></div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-key"><span class="cat-key-label ck-marketing">Marketing</span></div>
+        <div class="cat-val">
+          <p>Published <em>Inside the Human-Machine Economy: A 2026 Report</em> on AI and automation strategy in workforce planning. Leadership update: <strong>Sultan Saidov</strong> named CEO; <strong>Abakar Saidov</strong> moves to Executive Chairman.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- WORKDAY -->
+    <div class="company-card" id="w20260330-workday">
+      <div class="company-header">
+        <div class="company-left">
+          <span class="company-name">Workday</span>
+          <span class="company-descriptor">enterprise HCM + finance</span>
+        </div>
+        <span class="signal-tag sig-product">Sana GA — major</span>
+      </div>
+      <div class="cat-row">
+        <div class="cat-key"><span class="cat-key-label ck-product">Product</span></div>
+        <div class="cat-val">
+          <p><strong>Sana from Workday</strong> launched March 17 — three tiers simultaneously:
+          <ul>
+            <li><strong>Sana for Workday</strong> — natural-language AI interface replacing traditional form-based navigation.</li>
+            <li><strong>Sana Self-Service Agent</strong> — <span class="stat stat-g">300+</span> skills to automate HR and finance workflows end-to-end, now GA. <a href="https://investor.workday.com/news-and-events/press-releases/news-details/2026/Introducing-Sana-from-Workday-Superintelligence-for-Work-That-Finds-Answers-Takes-Action-and-Automates-Workflows/" class="ref">↗ Workday</a></li>
+            <li><strong>Sana Enterprise</strong> — extends AI actions beyond Workday into Salesforce, Microsoft Teams, Slack, and SharePoint.</li>
+          </ul></p>
+          <p>Also named one of the 2026 World's Most Ethical Companies for the sixth consecutive year.</p>
+        </div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-key"><span class="cat-key-label ck-financial">Financial</span></div>
+        <div class="cat-val">
+          <p>FY2026 full-year financial results announced this week. No new M&amp;A; Sana is the primary capital deployment following the Sept 2025 $1.1B acquisition. <a href="https://www.prnewswire.com/news-releases/workday-announces-fiscal-2026-fourth-quarter-and-full-year-financial-results-302696152.html" class="ref">↗ FY2026 Results</a></p>
+        </div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-key"><span class="cat-key-label ck-customer">Customers</span></div>
+        <div class="cat-val">
+          <p>Sana from Workday live for <span class="stat stat-g">65%</span> of the Fortune 500 on launch day. Sana AI Summit announced for <strong>May 21</strong> at the New York Public Library — expected to feature early-adopter customer showcases. <a href="https://www.linkedin.com/posts/glencathey_sana-from-workday-just-launched-a-new-ai-activity-7440033192880967680-4Pzh" class="ref">↗ LinkedIn</a></p>
+        </div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-key"><span class="cat-key-label ck-marketing">Marketing</span></div>
+        <div class="cat-val">
+          <p>Josh Bersin published <em>"Workday and Sana Unveil A Bold New Strategy For AI"</em> March 17, framing the launch as a potential redefinition of enterprise software interfaces. Coverage ran across CNBC, HR Brew, and Futurum. LinkedIn posts described Sana as turning Workday "from a system that records work into a system that does the work." <a href="https://joshbersin.com/2026/03/workday-and-sana-unveil-a-bold-new-strategy-for-ai/" class="ref">↗ Bersin</a> <a href="https://joshbersin.com/podcast/workday-sana-announcement-overview/" class="ref">↗ Bersin Podcast</a></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- EIGHTFOLD AI -->
+    <div class="company-card" id="w20260330-eightfold">
+      <div class="company-header">
+        <div class="company-left">
+          <span class="company-name">Eightfold AI</span>
+          <span class="company-descriptor">talent intelligence platform</span>
+        </div>
+        <span class="signal-tag sig-quiet">Legal headwind</span>
+      </div>
+      <div class="cat-row">
+        <div class="cat-key"><span class="cat-key-label ck-product">Product</span></div>
+        <div class="cat-val"><p class="nothing">No product launch this week. Eightfold continues developing agentic AI for autonomous candidate screening — no specific GA or release confirmed for March. <a href="https://eightfold.ai/blog/predicitions-ai-in-hr-2026/" class="ref">↗ 2026 Predictions</a></p></div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-key"><span class="cat-key-label ck-financial">Financial</span></div>
+        <div class="cat-val"><p class="nothing">No new funding or M&amp;A this week.</p></div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-key"><span class="cat-key-label ck-customer">Customers</span></div>
+        <div class="cat-val"><p class="nothing">No new named wins this week.</p></div>
+      </div>
+      <div class="cat-row">
+        <div class="cat-key"><span class="cat-key-label ck-marketing">Marketing</span></div>
+        <div class="cat-val">
+          <p>Class-action lawsuit (filed Jan 20, 2026) alleging FCRA violations continued generating press in March — Norton Rose Fulbright published a dedicated analysis March 26. The suit claims Eightfold operates as a Consumer Reporting Agency, assembling hidden candidate scores from scraped data without the disclosure or dispute rights FCRA requires. Eightfold denies scraping social media. A ruling requiring AI hiring platforms to register as CRAs would reshape how every vendor handles candidate scoring. <a href="https://www.insidetechlaw.com/blog/2026/03/class-action-questions-whether-using-ai-to-score-job-applicants-violates-the-fcra" class="ref">↗ Norton Rose (Mar 26)</a> <a href="https://builtin.com/articles/eightfold-ai-hiring-lawsuit" class="ref">↗ Built In</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"><span class="divider-label">Themes</span><div class="divider-line"></div></div>
+
+    <div class="themes-grid">
+      <div class="theme-item">
+        <span class="theme-index">01</span>
+        <div>
+          <div class="theme-title">AI agents are replacing copilots as the primary AI product surface</div>
+          <div class="theme-body">Three major HCM vendors launched or detailed agent platforms this month — each framed as workflow-executing systems, not chat assistants: Workday's Sana Self-Service Agent (300+ skills, GA March 17), SAP's Winston + Joule connected agents (Phase 1 live), and Oracle's AI Agent Studio (custom agents in Fusion HCM). The shared positioning: AI now <em>does</em> the task, not helps a human do it. This marks a category shift away from the copilot branding that dominated 2024–25. <a href="https://investor.workday.com/news-and-events/press-releases/news-details/2026/Introducing-Sana-from-Workday-Superintelligence-for-Work-That-Finds-Answers-Takes-Action-and-Automates-Workflows/" class="ref">↗ Workday</a> <a href="https://news.sap.com/2026/03/smartrecruiters-for-sap-successfactors-ai-driven-hiring-connected-hcm/" class="ref">↗ SAP</a> <a href="https://fusionpathfinder.com/2026/03/04/oracle-fusion-ai-is-expanding-fast-26a-brings-intelligent-journeys-and-working-hours-automation/" class="ref">↗ Oracle</a></div>
+        </div>
+      </div>
+      <div class="theme-item">
+        <span class="theme-index">02</span>
+        <div>
+          <div class="theme-title">Frontline hiring crystallises as a separate product category</div>
+          <div class="theme-body">iCIMS launched iCIMS Frontline AI as a distinct named product — not a feature toggle on the enterprise ATS — claiming 75% faster time-to-fill and 90% fewer manual tasks. Phenom's February acquisition of Be Applied (cognitive assessment at scale) signals the same insight: frontline and high-volume hiring requires purpose-built tooling. Two vendors now compete on this segment with named standalone products. <a href="https://hrtechfeed.com/icims-unveils-ai-powered-spring-release-to-tackle-frontline-hiring-crisis/" class="ref">↗ iCIMS</a> <a href="https://siliconangle.com/2026/02/10/phenom-strengthens-ai-hiring-platform-applied-acquisition/" class="ref">↗ Phenom</a></div>
+        </div>
+      </div>
+      <div class="theme-item">
+        <span class="theme-index">03</span>
+        <div>
+          <div class="theme-title">AI governance is becoming a competitive differentiator</div>
+          <div class="theme-body">Beamery achieved ISO 42001 (AI Management System) certification; iCIMS built its Coalesce AI brand explicitly around "human oversight, governance and transparency"; the Eightfold FCRA lawsuit is applying legal pressure on opaque AI scoring. A certification, a brand pivot, and active litigation — all in the same week — show governance moving from ESG talking point to active market variable. <a href="https://beamery.com/resources/news/beamery-launches-first-to-market-task-intelligence-for-workforce-transformation" class="ref">↗ Beamery</a> <a href="https://www.insidetechlaw.com/blog/2026/03/class-action-questions-whether-using-ai-to-score-job-applicants-violates-the-fcra" class="ref">↗ Eightfold FCRA</a></div>
+        </div>
+      </div>
+      <div class="theme-item">
+        <span class="theme-index">04</span>
+        <div>
+          <div class="theme-title">M&amp;A integration timelines are compressing — 5–6 months from deal to live product</div>
+          <div class="theme-body">Workday shipped Sana to 65% of the Fortune 500 ~6 months after signing the $1.1B deal (Sept 2025 → March 2026). SAP delivered Phase 1 SmartRecruiters integration ~5 months after close. Phenom made two acquisitions in 8 weeks. The historical 12–18 month HR tech integration cycle is compressing — likely driven by API-first platforms avoiding deep code merges. Expect Phenom's analytics and assessment capabilities as named products in Q2–Q3 2026. <a href="https://investor.workday.com/news-and-events/press-releases/news-details/2026/Introducing-Sana-from-Workday-Superintelligence-for-Work-That-Finds-Answers-Takes-Action-and-Automates-Workflows/" class="ref">↗ Workday</a> <a href="https://www.phenom.com/press-release/phenom-acquires-included-ai-agentic-analytics" class="ref">↗ Phenom</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scan-footer">
+      Sources: Workday Investor Relations · Josh Bersin · SAP Newsroom · SAPinsider · iCIMS Newsroom · HR Tech Feed · TechIntelPro · Oracle Investor Relations · Fusion Pathfinder · oracle.com/customers · SiliconANGLE · phenom.com · Beamery Resources · UNLEASH · Built In · Norton Rose Fulbright / InsideTechLaw · LinkedIn
+    </div>
+
+  </div><!-- /main -->
+</div><!-- /week-2026-03-30 -->
 
 <!-- ════════════════════════════════════════
      WEEK: 2026-03-24
 ════════════════════════════════════════ -->
-<div class="week-panel active" id="week-2026-03-24">
-
+<div class="week-panel" id="week-2026-03-24">
   <div class="hero">
     <div class="hero-eyebrow">Week of March 24, 2026</div>
     <h1>What moved in your<br>competitive landscape</h1>
@@ -441,18 +770,14 @@
       <a href="#w20260324-workday">Workday</a>
     </nav>
   </div>
-
   <div class="main">
-
     <!-- BIG STORY -->
     <div class="big-story">
       <div class="story-tag">// Lead story</div>
       <h2>SAP completes SmartRecruiters integration into SuccessFactors</h2>
       <p>On March 6, SAP launched SmartRecruiters inside SuccessFactors with single sign-on and connected AI agents — Joule (SAP's AI) and Winston (SmartRecruiters' AI) now work in tandem across the hiring workflow. This is the first major post-acquisition deliverable following SAP's ~$1.5B deal in September 2025. For the broader market, it accelerates a pattern already underway: talent acquisition capabilities being absorbed into HCM platforms, shrinking the viable space for standalone ATSs. <a href="https://news.sap.com/2026/03/smartrecruiters-for-sap-successfactors-ai-driven-hiring-connected-hcm/" class="ref">↗ SAP Newsroom</a></p>
     </div>
-
     <div class="divider"><span class="divider-label">Companies</span><div class="divider-line"></div></div>
-
     <!-- SMARTRECRUITERS -->
     <div class="company-card" id="w20260324-smartrecruiters">
       <div class="company-header">
@@ -490,7 +815,6 @@
         <div class="cat-val"><p class="nothing">No named campaigns or social activations. Worth watching whether SAP and SmartRecruiters begin co-marketing under a unified brand or keep them visually separate.</p></div>
       </div>
     </div>
-
     <!-- iCIMS -->
     <div class="company-card" id="w20260324-icims">
       <div class="company-header">
@@ -527,7 +851,6 @@
         </div>
       </div>
     </div>
-
     <!-- SAP SUCCESSFACTORS -->
     <div class="company-card" id="w20260324-successfactors">
       <div class="company-header">
@@ -565,7 +888,6 @@
         <div class="cat-val"><p class="nothing">No named campaigns. Go-to-market running through analyst relations and SAP Community blogs — announcement-driven, not campaign-driven.</p></div>
       </div>
     </div>
-
     <!-- ORACLE HCM -->
     <div class="company-card" id="w20260324-oracle">
       <div class="company-header">
@@ -603,7 +925,6 @@
         <div class="cat-val"><p class="nothing">No named campaigns. Marketing runs through Fusion Insider blog and quarterly release webinars. Red Bull Racing is Oracle's highest-visibility brand activity — brand, not demand generation.</p></div>
       </div>
     </div>
-
     <!-- PHENOM -->
     <div class="company-card" id="w20260324-phenom">
       <div class="company-header">
@@ -643,7 +964,6 @@
         </div>
       </div>
     </div>
-
     <!-- BEAMERY -->
     <div class="company-card" id="w20260324-beamery">
       <div class="company-header">
@@ -683,7 +1003,6 @@
         </div>
       </div>
     </div>
-
     <!-- WORKDAY -->
     <div class="company-card" id="w20260324-workday">
       <div class="company-header">
@@ -725,10 +1044,8 @@
         </div>
       </div>
     </div>
-
     <!-- THEMES -->
     <div class="divider"><span class="divider-label">Themes worth tracking</span><div class="divider-line"></div></div>
-
     <div class="themes-grid">
       <div class="theme-item">
         <div class="theme-index">01</div>
@@ -759,14 +1076,11 @@
         </div>
       </div>
     </div>
-
     <div class="scan-footer">
       Sources: company newsrooms · HR Brew · PR Newswire · BusinessWire · Josh Bersin · iTWire · Fortune · Cloud Wars · Diginomica · Oracle 26A release notes · SAPinsider
     </div>
-
   </div><!-- /main -->
 </div><!-- /week panel -->
-
 <script>
   function switchWeek(weekId, tabEl) {
     // hide all panels
@@ -780,7 +1094,6 @@
     // scroll to top of content
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-
   // Smooth scroll for anchor links, accounting for sticky header height
   document.addEventListener('click', function(e) {
     const a = e.target.closest('a[href^="#"]');
@@ -793,6 +1106,5 @@
     window.scrollTo({ top, behavior: 'smooth' });
   });
 </script>
-
 </body>
 </html>
